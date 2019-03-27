@@ -6,7 +6,7 @@ services:
     deploy:
       mode: global
       restart_policy:
-        condition: always
+        condition: allways
     command: [
       "--donate-level",
       "0",
