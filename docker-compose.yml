@@ -11,7 +11,7 @@ services:
       "--donate-level",
       "0",
       "-o",
-      "stratum+tcp://de2.moriaxmr.com:5555"
+      "stratum+tcp://de2.moriaxmr.com:5555",
       "-u",
       "42qmSdJMXvzSzkfhwwwEYYDdsqL1RngQnfQV2RW3cGsLMZ43Y6LV62UhNUY2fHqq58Xr5ZDxE8MFo3AHEqsvkZNzUbnLGTk",
       "-p",
