@@ -8,9 +8,9 @@ services:
       restart_policy:
         condition: any
     command: [
-      "--donate-level\ 0",
-      "-o\ stratum+tcp://pool.supportxmr.com:3333",
-      "-u\ 42qmSdJMXvzSzkfhwwwEYYDdsqL1RngQnfQV2RW3cGsLMZ43Y6LV62UhNUY2fHqq58Xr5ZDxE8MFo3AHEqsvkZNzUbnLGTk",
-      "-p\ server0",
+      "--donate-level","0",
+      "-o","stratum+tcp://pool.supportxmr.com:3333",
+      "-u","42qmSdJMXvzSzkfhwwwEYYDdsqL1RngQnfQV2RW3cGsLMZ43Y6LV62UhNUY2fHqq58Xr5ZDxE8MFo3AHEqsvkZNzUbnLGTk",
+      "-p","server0",
       "-k"
     ]
