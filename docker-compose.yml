@@ -7,6 +7,8 @@ services:
       mode: global
       restart_policy:
         condition: any
+    devices:
+      -"/dev/hugepages:/dev/hugepages"
     command: [
       "--donate-level=0",
       "--tls",
