@@ -1,6 +1,17 @@
 version: '3'
 
 services:
+  xmrig-proxy:
+    image: xmrig/xmrig-proxy
+    deploy:
+      mode: replicated
+      replicas: 1
+    command: [
+      "-o","pool.supportxmr.com:5555",
+      "--bind","0.0.0.0:3333",
+      "--donate-level=0",
+      "-u","42qmSdJMXvzSzkfhwwwEYYDdsqL1RngQnfQV2RW3cGsLMZ43Y6LV62UhNUY2fHqq58Xr5ZDxE8MFo3AHEqsvkZNzUbnLGTk"
+    ]
   xmrig:
     image: bananajamma/xmrig
     deploy:
@@ -12,9 +23,6 @@ services:
     ]
     command: [
       "--donate-level=0",
-      "--tls",
-      "-o","pool.supportxmr.com:9000",
-      "-u","42qmSdJMXvzSzkfhwwwEYYDdsqL1RngQnfQV2RW3cGsLMZ43Y6LV62UhNUY2fHqq58Xr5ZDxE8MFo3AHEqsvkZNzUbnLGTk",
-      "-k",
+      "-o","xmrig-proxy:3333",
       "--max-cpu-usage=98"
     ]
