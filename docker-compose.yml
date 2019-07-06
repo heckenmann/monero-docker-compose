@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  xmrig:
+  miner:
     image: heckenmann/docker-xmr-stak-cpu
     deploy:
       mode: global
