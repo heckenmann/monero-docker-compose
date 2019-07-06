@@ -2,17 +2,17 @@ version: '3'
 
 services:
   xmrig:
-    image: bananajamma/xmrig
+    image: heckenmann/docker-xmr-stak-cpu
     deploy:
       mode: global
       restart_policy:
         condition: any
-    devices: [
+    volumes: [
       "/dev/hugepages:/dev/hugepages"
     ]
-    command: [
-      "--donate-level=0",
-      "--max-cpu-usage=99",
-      "-u","42qmSdJMXvzSzkfhwwwEYYDdsqL1RngQnfQV2RW3cGsLMZ43Y6LV62UhNUY2fHqq58Xr5ZDxE8MFo3AHEqsvkZNzUbnLGTk+2000",
-      "-o","pool.supportxmr.com:3333",
+    environment: [
+      "WALLET_ADDRESS=42qmSdJMXvzSzkfhwwwEYYDdsqL1RngQnfQV2RW3cGsLMZ43Y6LV62UhNUY2fHqq58Xr5ZDxE8MFo3AHEqsvkZNzUbnLGTk",
+      "POOL_PASSWORD=x",
+      "POOL_ADDRESS=pool.supportxmr.com:5555",
+      "CURRENCY=monero"
     ]
