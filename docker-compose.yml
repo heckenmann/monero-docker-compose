@@ -14,5 +14,5 @@ services:
       "WALLET_ADDRESS=42qmSdJMXvzSzkfhwwwEYYDdsqL1RngQnfQV2RW3cGsLMZ43Y6LV62UhNUY2fHqq58Xr5ZDxE8MFo3AHEqsvkZNzUbnLGTk",
       "POOL_PASSWORD=x",
       "POOL_ADDRESS=pool.supportxmr.com:5555",
-      "CURRENCY=monero"
+      "CURRENCY=randomx"
     ]
