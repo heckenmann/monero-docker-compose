@@ -2,7 +2,7 @@ version: '3'
 
 services:
   miner:
-    image: heckenmann/docker-xmr-stak-cpu
+    image: kannix/monero-miner
     deploy:
       mode: global
       restart_policy:
@@ -10,9 +10,9 @@ services:
     volumes: [
       "/dev/hugepages:/dev/hugepages"
     ]
-    environment: [
-      "WALLET_ADDRESS=42qmSdJMXvzSzkfhwwwEYYDdsqL1RngQnfQV2RW3cGsLMZ43Y6LV62UhNUY2fHqq58Xr5ZDxE8MFo3AHEqsvkZNzUbnLGTk",
-      "POOL_PASSWORD=x",
-      "POOL_ADDRESS=pool.supportxmr.com:3333",
-      "CURRENCY=randomx"
-    ]
+    command:
+      - "--url=pool.supportxmr.com:3333"
+      - "--user=42qmSdJMXvzSzkfhwwwEYYDdsqL1RngQnfQV2RW3cGsLMZ43Y6LV62UhNUY2fHqq58Xr5ZDxE8MFo3AHEqsvkZNzUbnLGTk"
+      - "--pass=x"
+      - "-k"
+      - "--coin=monero"
