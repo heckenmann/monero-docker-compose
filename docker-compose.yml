@@ -16,3 +16,4 @@ services:
       - "--pass=x"
       - "-k"
       - "--coin=monero"
+      - "--donate-level=1"
