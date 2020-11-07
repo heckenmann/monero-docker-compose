@@ -2,7 +2,7 @@ version: '3'
 
 services:
   miner:
-    image: kannix/monero-miner
+    image: bananajamma/xmrig
     deploy:
       mode: global
       restart_policy:
@@ -16,4 +16,4 @@ services:
       - "--pass=x"
       - "-k"
       - "--coin=monero"
-      - "--donate-level=1"
+      - "--donate-level=0"
